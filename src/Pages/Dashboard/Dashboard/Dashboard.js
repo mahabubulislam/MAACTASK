@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { GrLocation } from 'react-icons/gr';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import DashboardFooter from './DashboardFooter';
 import DashboardNavbar from './DashboardNavbar';
 
 const Dashboard = () => {
     const [open, setOpen] = useState(false)
+    const location = useLocation()
+    console.log(location.pathname==='/dashboard/create-region');
     return (
         <section>
             <DashboardNavbar />
