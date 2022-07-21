@@ -1,8 +1,9 @@
+import Navbar from "./Pages/Shared/Navbar/Navbar";
 
 function App() {
   return (
     <div>
-      <h1 className="text-primary">Hello</h1>
+      <Navbar />
     </div>
   );
 }
