@@ -25,13 +25,13 @@ const Register = () => {
                             <span className='text-accent block mb-px mt-6' >Your Mobile Number</span>
                             <input type="tel" name='phone' id='phone' className='outline-none border-b-2 border-info w-full' />
                         </label>
-                        <label className="block" htmlFor='password'>
+                        <label className="block" htmlFor='new-password'>
                             <span className='text-accent block mb-px mt-6' >Password</span>
-                            <input type="password" name='password' id='password' className='outline-none border-b-2 border-info w-full' />
+                            <input type="password" name='new-password' id='new-password' className='outline-none border-b-2 border-info w-full' autoComplete='off'/>
                         </label>
                         <label className="block" htmlFor='confirm-password'>
                             <span className='text-accent block mb-px mt-6' >Confirm Password</span>
-                            <input type="password" name='confirm-password' id='confirm-password' className='outline-none border-b-2 border-info  w-full' />
+                            <input type="password" name='confirm-password' id='confirm-password' className='outline-none border-b-2 border-info  w-full' autoComplete='off'/>
                         </label>
                         <label className="block" htmlFor='select'>
                             <span className='text-accent block mb-px mt-6' >Select Your Role</span>
@@ -46,7 +46,7 @@ const Register = () => {
                         </label>
                         <input type="submit" value="Create Account" className='bg-primary text-white font-bold w-full mt-12 py-6 px-56  rounded-lg' />
                         <label className="block mt-16 mb-20">
-                            <p className="block text-center font-medium my-2">Already have an account? <Link to='/login' className='text-primary'>Sign In</Link></p>
+                            <p className="block text-center font-medium my-2">Already have an account? <Link to='/signin' className='text-primary'>Sign In</Link></p>
                         </label>
                     </form>
                 </div>
