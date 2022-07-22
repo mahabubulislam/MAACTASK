@@ -13,10 +13,7 @@ const AreaList = () => {
             }
         })
             .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setAreas(data?.area)
-            })
+            .then(data => { setAreas(data?.area) })
     }, [])
     return (
         <>
@@ -69,9 +66,9 @@ const AreaList = () => {
                         </table>
                     </div>
                 </section>
-                :
-                <EmptyData/>
-        }
+                    :
+                    <EmptyData />
+            }
         </>
     );
 };

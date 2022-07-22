@@ -9,7 +9,6 @@ const SignIn = () => {
     const [token, setToken]= useState('')
     
     const onSubmit = data => {
-        console.log(data);
         fetch('https://staging-api.erpxbd.com/api/v1/users/login', {
             method: 'POST',
             headers: {
