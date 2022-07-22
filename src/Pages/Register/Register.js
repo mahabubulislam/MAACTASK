@@ -20,11 +20,8 @@ const Register = () => {
                     body: JSON.stringify(data)
                 })
                     .then(res => res.json())
-                    .then(data => console.log(data))
+                    .then(data => setPassError(data.message))
                 setPassError('')
-            }
-            else {
-                setPassError("Password didn't match")
             }
         }
         else {
@@ -72,7 +69,6 @@ const Register = () => {
                                 <input type="password"  {...register("passwordConfirm", { required: true, minLength: 8 })} className='outline-none border-b-2 border-info  w-full' autoComplete='off' />
                                 {errors.passwordConfirm?.type === 'required' && <small className='block text-red-600'>Confirm Password is required</small>}
                                 {errors.passwordConfirm?.type === 'minLength' && <small className='block text-red-600'>Password must be 8 characters</small>}
-                                {<small className='block text-red-600'>{passError}</small>}
                             </label>
                             <label className="block" >
                                 <span className='text-accent block mb-px mt-6' >Select Your Role</span>
@@ -87,6 +83,7 @@ const Register = () => {
                                 }} type="checkbox" className="checkbox" />
                                 <span className='ml-4'>I read and agree to the <Link to="/terms" className='text-primary'>Terms & Condition</Link></span>
                             </label>
+                            {<small className='block text-red-600'>{passError}</small>}
                             {<small className='block text-red-600'>{error}</small>}
                             <input type="submit" value="Create Account" className='bg-primary text-white font-bold w-full mt-12 py-6 px-56 cursor-pointer rounded-lg' />
                             <label className="block mt-16 mb-20">
