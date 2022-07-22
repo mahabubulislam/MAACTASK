@@ -10,7 +10,7 @@ import client from '../../assets/images/icons/user.png'
 import cup from '../../assets/images/icons/cup.png'
 const AboutUs = () => {
     return (
-        <section className='px-14 mt-60 bg-cover' style={{ backgroundImage: `url("https://i.ibb.co/zxYp4Cw/blue-abstract-layered-stripes-background-1.png")` }}>
+        <section className='px-14 mt-48 bg-cover py-20' style={{ backgroundImage: `url("https://i.ibb.co/zxYp4Cw/blue-abstract-layered-stripes-background-1.png")` }}>
             <section className='flex justify-between items-center'>
                 <section className='relative h-[486px]'>
                     <div className='px-20 py-24 rounded-2xl bg-[#F1F6FF]'>

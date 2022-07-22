@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../Shared/Navbar/Navbar'
 import AboutUs from './AboutUs';
 import Banner from './Banner';
+import FAQ from './FAQ';
 import ProductFetures from './ProductFetures';
 
 const Home = () => {
@@ -12,6 +13,7 @@ const Home = () => {
                 <Banner/>
                 <ProductFetures/>    
                 <AboutUs/>
+                <FAQ/>
             </div>
 
         </>
