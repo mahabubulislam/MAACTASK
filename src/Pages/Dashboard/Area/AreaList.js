@@ -18,7 +18,7 @@ const AreaList = () => {
     return (
         <>
             {
-                areas ? <section className='px-6 my-32'>
+                areas ? <section className='px-6 mb-32'>
                     <div className='bg-white p-6 flex items-center justify-end'>
                         <div className='relative' >
                             <input onChange={(e) => setShow(e.target.value)} type="search" name="" id="" className='rounded-full border-2 border-[#E5E6E6] outline-none p-2' placeholder='       Search...' />

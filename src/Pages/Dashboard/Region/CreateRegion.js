@@ -3,7 +3,7 @@ import React from 'react';
 const CreateRegion = () => {
     return (
         <section>
-            <div className="w-[475px] bg-base-100 shadow-xl rounded-xl mt-32 mx-auto">
+            <div className="w-[475px] bg-base-100 shadow-xl rounded-xl mx-auto">
                 <div className="p-12">
                     <div>
                         <label className="label">
