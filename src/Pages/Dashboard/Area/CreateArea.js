@@ -6,14 +6,16 @@ const CreateArea = () => {
             <div className="w-[475px] bg-base-100 shadow-xl rounded-xl mt-32 mx-auto">
                 <div className="p-12">
                     <div>
-                        <label>
-                            <select className="bg-base-100 select rounded-xl w-full border-2 border-[#CED4DA] outline-none" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
-                                <option disabled selected>Select Region</option>
-                                <option>Dhaka</option>
-                                <option>Tangail</option>
-                                <option>Rajhshahi</option>
-                            </select>
+                        <label className='label'>
+                            <span className="label-text">Region</span>
                         </label>
+                        <select className="bg-base-100 select rounded-xl w-full border-2 border-[#CED4DA] outline-none" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
+                            <option defaultValue="Select Region">Select Region</option>
+                            <option value="Dhaka">Dhaka</option>
+                            <option value="Tangail">Tangail</option>
+                            <option value="Rajhshahi">Rajhshahi</option>
+                        </select>
+
                         <label className="label">
                             <span className="label-text">Area</span>
                         </label>

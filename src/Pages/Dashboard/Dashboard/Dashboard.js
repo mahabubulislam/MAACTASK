@@ -23,8 +23,8 @@ const Dashboard = () => {
                     <div className='text-accent'>
                         <p className='flex ml-5'><GrLocation className='mr-5' /> Geo Information</p>
                         <nav className='ml-14 flex flex-col mt-4'>
-                            <NavLink to='create-region' className='mt-3 '>Area</NavLink>
-                            <NavLink to='area' className='mt-3 '>Region</NavLink>
+                            <NavLink to='area' className='mt-3 '>Area</NavLink>
+                            <NavLink to='region' className='mt-3 '>Region</NavLink>
                         </nav>
                     </div>
                 </section>
