@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Footer from '../Shared/Footer/Footer';
 import Navbar from '../Shared/Navbar/Navbar';
 import { useForm } from "react-hook-form";
 const SignIn = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [error, setError] = useState('')
+    const [token, setToken]= useState('')
+    
     const onSubmit = data => {
         console.log(data);
         fetch('https://staging-api.erpxbd.com/api/v1/users/login', {
@@ -16,8 +18,15 @@ const SignIn = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(data => setError(data.message))
+            .then(data => {
+                setToken(data.token)
+                localStorage.setItem('token', data?.token)
+                setError(data.message)})
     }
+    if(token){
+        return <Navigate to="/dashboard"></Navigate>
+    }
+
     return (
         <section style={{ backgroundImage: `url("https://i.ibb.co/VtVnhpf/blue-abstract-layered-stripes-background-2.png")` }}>
             <Navbar />

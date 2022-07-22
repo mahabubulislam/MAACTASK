@@ -8,7 +8,7 @@ import DashboardNavbar from './DashboardNavbar';
 const Dashboard = () => {
     const [open, setOpen] = useState(false)
     const location = useLocation()
-    console.log(location.pathname==='/dashboard/create-region');
+    
     return (
         <section>
             <DashboardNavbar />
