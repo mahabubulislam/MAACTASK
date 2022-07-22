@@ -10,7 +10,7 @@ const Dashboard = () => {
     const [open, setOpen] = useState(false)
     const location = useLocation()
     const b = location.pathname.split('/')
-    const breadcrumbs = b[2].replace('-', ' ')
+    const breadcrumbs = b[2]?.replace('-', ' ')
     
     return (
         <section>
@@ -34,12 +34,12 @@ const Dashboard = () => {
                 <section className='bg-success w-full  flex flex-col justify-between'>
                     <section>
                         <div className='p-10'>
-                            <h3 className='text-secondary font-bold capitalize'>{breadcrumbs}</h3>
+                            <h3 className='text-secondary font-bold capitalize'>{breadcrumbs || 'dashboard'}</h3>
                             <div className='flex items-center'>
                                 <span className='text-accent'>Geo</span>
                                 <AiOutlineRight className='text-sm font-bold text-accent mx-2'/>
                                 <span className='text-accent'>Geo List</span>
-                                <AiOutlineRight className='text-sm font-bold text-accent mx-2'/>
+                                {breadcrumbs && <AiOutlineRight className='text-sm font-bold text-accent mx-2'/>}
                                 <span className='capitalize text-primary'>{breadcrumbs}</span>
                             </div>
                         </div>
