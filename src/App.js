@@ -17,12 +17,9 @@ function App() {
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/signin" element={<SignIn/>}></Route>
         <Route path="/dashboard" element={<Dashboard/>}>
-          <Route index  element={<EmptyData/>}></Route>
-          <Route path="area" element={<EmptyData/>}></Route>
-          <Route path="area-list" element={<AreaList/>}></Route>
+          <Route index element={<AreaList/>}></Route>
           <Route path="create-area" element={<CreateArea/>}></Route>
           <Route path="area/create-area" element={<CreateArea/>}></Route>
-          <Route path="region" element={<EmptyData/>}></Route>
           <Route path="region-list" element={<RegionList/>}></Route>
           <Route path="create-region" element={<CreateRegion/>}></Route>
           <Route path="region/create-region" element={<CreateRegion/>}></Route>
