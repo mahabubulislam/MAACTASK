@@ -30,7 +30,7 @@ const CreateRegion = () => {
                         {errors.name?.type === 'required' && <small className='block text-red-600'>Region Name is required</small>}
                     </div>
                     <div className="flex justify-end">
-                        <input type="submit" className="bg-neutral text-white mt-14 py-3 px-5 rounded-xl" value="Add Region" />
+                        <input type="submit" className="bg-neutral text-white mt-14 py-3 px-5 rounded-xl cursor-pointer" value="Add Region" />
                     </div>
                 </form>
             </div>

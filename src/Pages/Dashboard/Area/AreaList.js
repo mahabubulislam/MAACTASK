@@ -5,8 +5,10 @@ import EmptyData from '../Dashboard/EmptyData';
 const AreaList = () => {
     const [show, setShow] = useState('')
     const [areas, setAreas] = useState([])
+    const [data, setData] = useState(5) 
+    console.log(data);
     useEffect(() => {
-        fetch('https://staging-api.erpxbd.com/api/v1/area/All/5/1', {
+        fetch(`https://staging-api.erpxbd.com/api/v1/area/All/${data}/1`, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -14,7 +16,7 @@ const AreaList = () => {
         })
             .then(res => res.json())
             .then(data => { setAreas(data?.area) })
-    }, [])
+    }, [data])
     return (
         <>
             {
@@ -25,11 +27,12 @@ const AreaList = () => {
                             <BiSearchAlt className={`text-xl absolute top-3 ml-2 text-accent ${!show ? 'block' : 'hidden'}`} />
                         </div>
                         <label>
-                            <select className="bg-base-100 select rounded-full w-72 border-2 border-[#E5E6E6] outline-none mx-3" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
+                            <select onChange={e=>setData(parseInt(e.target.value))} className="bg-base-100 select rounded-full w-72 border-2 border-[#E5E6E6] outline-none mx-3" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
+                                <option>5</option>
                                 <option>10</option>
                                 <option>20</option>
-                                <option>30</option>
                                 <option>50</option>
+                                <option>80</option>
                             </select>
                         </label>
                     </div>

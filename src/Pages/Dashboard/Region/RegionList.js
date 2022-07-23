@@ -1,20 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { BiSearchAlt } from 'react-icons/bi'
+import useRegions from '../../../hooks/useRegions';
 const RegionList = () => {
     const [show, setShow] = useState('')
-    const [regions, setRegions] = useState([])
-    useEffect(() => {
-        fetch('https://staging-api.erpxbd.com/api/v1/region/20/1', {
-            method: 'GET',
-            headers: {
-                authorization: `Bearer ${localStorage.getItem('token')}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                setRegions(data?.region)
-            })
-    }, [])
+    const [regions] = useRegions()
     return (
         <section className='px-6 mb-32'>
             <div className='bg-white p-6 flex items-center justify-end'>
