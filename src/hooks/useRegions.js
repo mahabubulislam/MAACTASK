@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 const useRegions = () => {
     const [regions, setRegions] = useState([])
     useEffect(() => {
-        fetch('https://staging-api.erpxbd.com/api/v1/region/20/1', {
+        fetch('https://staging-api.erpxbd.com/api/v1/region/all/1', {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`

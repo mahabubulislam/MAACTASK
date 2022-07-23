@@ -7,7 +7,7 @@ import DashboardFooter from './DashboardFooter';
 import DashboardNavbar from './DashboardNavbar';
 
 const Dashboard = () => {
-    const [open, setOpen] = useState(false)
+   
     const location = useLocation()
     const b = location.pathname.split('/')
     const breadcrumbs = b[2]?.replace('-', ' ')
@@ -16,10 +16,10 @@ const Dashboard = () => {
         <section>
             <DashboardNavbar />
             <section className='flex justify-between'>
-                <section className={`w-96 ${open && 'w-20'} duration-700 ease-in-out`}>
-                    <div className={`flex justify-between items-center relative p-6`}>
-                        <p className={`text-accent uppercase font-semibold `}>Menu</p>
-                        <div onClick={() => setOpen(!open)} className={`rounded-full w-6 p-1 bg-secondary text-white ${!open && 'absolute -right-3'} ease-in-out duration-700`}>
+                <section>
+                    <div className="flex justify-between items-center relative p-6">
+                        <p className="text-accent uppercase font-semibold">Menu</p>
+                        <div className="rounded-full w-6 p-1 bg-secondary text-white absolute -right-3">
                             <AiOutlineLeft />
                         </div>
                     </div>

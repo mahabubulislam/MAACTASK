@@ -5,10 +5,10 @@ import EmptyData from '../Dashboard/EmptyData';
 const AreaList = () => {
     const [show, setShow] = useState('')
     const [areas, setAreas] = useState([])
-    const [data, setData] = useState(5) 
-    console.log(data);
+    const [data, setData] = useState(5)
+    const [search, setSearch] = useState('')
     useEffect(() => {
-        fetch(`https://staging-api.erpxbd.com/api/v1/area/All/${data}/1`, {
+        fetch(`https://staging-api.erpxbd.com/api/v1/area/All/${data}/1?name=${search}`, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('token')}`
@@ -16,18 +16,21 @@ const AreaList = () => {
         })
             .then(res => res.json())
             .then(data => { setAreas(data?.area) })
-    }, [data])
+    }, [data, search])
     return (
         <>
             {
                 areas ? <section className='px-6 mb-32'>
                     <div className='bg-white p-6 flex items-center justify-end'>
                         <div className='relative' >
-                            <input onChange={(e) => setShow(e.target.value)} type="search" name="" id="" className='rounded-full border-2 border-[#E5E6E6] outline-none p-2' placeholder='       Search...' />
+                            <input onChange={(e) => {
+                                setShow(e.target.value)
+                                setSearch(e.target.value)
+                            }} type="search" name="" id="" className='rounded-full border-2 border-[#E5E6E6] outline-none p-2' placeholder='       Search...' />
                             <BiSearchAlt className={`text-xl absolute top-3 ml-2 text-accent ${!show ? 'block' : 'hidden'}`} />
                         </div>
                         <label>
-                            <select onChange={e=>setData(parseInt(e.target.value))} className="bg-base-100 select rounded-full w-72 border-2 border-[#E5E6E6] outline-none mx-3" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
+                            <select onChange={e => setData(parseInt(e.target.value))} className="bg-base-100 select rounded-full w-72 border-2 border-[#E5E6E6] outline-none mx-3" style={{ outline: 'none', padding: '8px', color: '#4E4E4E', fontWeight: '400' }}>
                                 <option>5</option>
                                 <option>10</option>
                                 <option>20</option>

@@ -6,23 +6,27 @@ import { useForm } from "react-hook-form";
 const SignIn = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [error, setError] = useState('')
-    const [token, setToken]= useState('')
-    
+    const [token, setToken] = useState('')
+
     const onSubmit = data => {
+      
         fetch('https://staging-api.erpxbd.com/api/v1/users/login', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
             body: JSON.stringify(data)
+
         })
             .then(res => res.json())
             .then(data => {
                 setToken(data.token)
                 localStorage.setItem('token', data?.token)
-                setError(data.message)})
+                localStorage.setItem('user', data?.user?.name)
+                setError(data.message)
+            })
     }
-    if(token){
+    if (token) {
         return <Navigate to="/dashboard"></Navigate>
     }
 
@@ -45,7 +49,7 @@ const SignIn = () => {
                                 <input type="password" {...register("password", { required: true, minLength: 8 })} className='outline-none border-b-2 border-info w-full' autoComplete='off' />
                                 {errors.password?.type === 'required' && <small className='block text-red-600'>Password is required</small>}
                                 {errors.password?.type === 'minLength' && <small className='block text-red-600'>Password must be 8 characters</small>}
-                                {<small className='block text-red-600'>{error}</small>}
+                                {error && <small className='block text-red-600'>{error}</small>}
                             </label>
 
                             <input type="submit" value="Sign In" className='bg-primary text-white font-bold w-full mt-12 py-6 px-56 cursor-pointer rounded-lg' />

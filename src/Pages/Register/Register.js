@@ -23,6 +23,7 @@ const Register = () => {
                     .then(res => res.json())
                     .then(data => {
                         localStorage.setItem('token', data?.token)
+                        localStorage.setItem('user', data?.user?.name)
                         setToken(data?.token)
                         setPassError(data.message)
                     })
