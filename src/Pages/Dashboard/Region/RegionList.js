@@ -35,6 +35,8 @@ const RegionList = () => {
                         <option>20</option>
                         <option>50</option>
                         <option>80</option>
+                        <option>100</option>
+                        <option>All</option>
                     </select>
                 </label>
             </div>
