@@ -3,13 +3,13 @@ import phone from '../../assets/images/banner/Central phone 2.png'
 import { HiOutlineCube } from 'react-icons/hi'
 const ProductFetures = () => {
     return (
-        <section className='mt-36'>
+        <section className='lg:mt-96 xl:mt-36'>
             <div className='text-center'>
                 <p className='text-primary font-medium'>Products Features</p>
                 <h2 className="text-5xl font-extrabold">Make more out of your data</h2>
             </div>
-            <section className='flex mt-36 px-14 gap-14'>
-                <section className='flex-grow'>
+            <section className='flex items-center mt-40 px-14 gap-14'>
+                <section className='flex-grow '>
                     <div>
                         <div className='p-4 rounded-2xl shadow-2xl w-16 ml-auto'>
                             <HiOutlineCube className='text-center text-primary text-4xl font-extrabold' />
@@ -33,8 +33,8 @@ const ProductFetures = () => {
                     </div>
                 </section>
                 <section className='relative ' style={{ flexGrow: 3}}>
-                    <div className='rounded-full bg-primary w-[548px] h-[548px]'></div>
-                    <img className='absolute -top-24 left-24 rounded-2xl shadow-2xl' src={phone} alt="" />
+                    <div className='rounded-full bg-primary lg:w-[400px] lg:h-[400px] xl:w-[548px] xl:h-[548px]'></div>
+                    <img className='absolute lg:w-3/5 lg:-top-12 lg:left-20 xl:-top-20 xl:left-24 rounded-xl' style={{boxShadow:'0px 1px 100px #052C68'}} src={phone} alt="" />
                 </section>
                 <section className='flex-grow'>
                     <div>

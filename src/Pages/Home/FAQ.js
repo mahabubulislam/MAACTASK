@@ -7,9 +7,9 @@ const FAQ = () => {
                 <p >Common Questions</p>
                 <h5 className='text-5xl font-bold mt-4'>Frequently asked questions</h5>
             </div>
-            <div className='flex justify-center gap-8 px-28'>
+            <div className='flex justify-center items-center gap-8 px-28'>
                 <div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box w-[592px] mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             What kind of data can I see in FieldX?
@@ -18,7 +18,7 @@ const FAQ = () => {
                             <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate.</p>
                         </div>
                     </div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box  mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             Does Bizzy read my customers' data?
@@ -27,7 +27,7 @@ const FAQ = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus numquam consequatur alias recusandae, voluptatem eos voluptates ad ipsa?</p>
                         </div>
                     </div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box  mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             What's your refund and cancellation policy?
@@ -38,31 +38,31 @@ const FAQ = () => {
                     </div>
                 </div>
                 <div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box w-[592px] mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             How do you take payments?
                         </div>
                         <div className="collapse-content">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis nulla similique sunt numquam accusantium, minima rem commodi optio incidunt unde veritatis alias, beatae porro adipisci suscipit nobis iure.</p>
+                            <p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in voluptate.</p>
                         </div>
                     </div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box  mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             Can I also track website analytics on fieldX?
                         </div>
                         <div className="collapse-content">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus voluptatum consequatur repellat fugit impedit corporis.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus numquam consequatur alias recusandae, voluptatem eos voluptates ad ipsa?</p>
                         </div>
                     </div>
-                    <div className="collapse  collapse-arrow bg-white rounded-box  mb-8">
+                    <div className="collapse  collapse-arrow bg-white rounded-box px-5 mb-8">
                         <input type="checkbox" />
                         <div className="collapse-title text-xl font-medium">
                             What makes Bizzy different from other analytics tools?
                         </div>
                         <div className="collapse-content">
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur ex ipsam dolore molestias facere veniam repellat nam ipsa fugiat autem?</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum sunt eius laboriosam at iusto reprehenderit, quibusdam aspernatur id.</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 import useRegions from '../../../hooks/useRegions';
 
 const CreateArea = () => {
@@ -25,6 +26,7 @@ const CreateArea = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data?.status === 'success') {
+                        toast.success('Area Added Successfully')
                         reset()
                     }
                 })

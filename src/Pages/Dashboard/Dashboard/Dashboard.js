@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 import { GrLocation } from 'react-icons/gr';
-import { Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation } from 'react-router-dom';
 import CustomActiveLink from './CustomActiveLink';
 import DashboardFooter from './DashboardFooter';
 import DashboardNavbar from './DashboardNavbar';
@@ -11,7 +11,6 @@ const Dashboard = () => {
     const location = useLocation()
     const b = location.pathname.split('/')
     const breadcrumbs = b[2]?.replace('-', ' ')
-    
     return (
         <section>
             <DashboardNavbar />
@@ -43,6 +42,7 @@ const Dashboard = () => {
                                 <span className='capitalize text-primary'>{breadcrumbs}</span>
                             </div>
                         </div>
+                        <Link to={`${location.pathname==='/dashboard/region-list' ? 'create-region' : 'create-area'}`} className='absolute right-6 top-28 bg-neutral text-white py-3 px-5 rounded-xl'>+ Create New</Link>
                         <Outlet />
                     </section>
                     <DashboardFooter />

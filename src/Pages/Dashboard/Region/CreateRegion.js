@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 const CreateRegion = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const onSubmit = data => {
@@ -14,6 +15,7 @@ const CreateRegion = () => {
             .then(res => res.json())
             .then(data => {
                 if (data?.status === 'success') {
+                    toast.success('Region added Successfully')
                     reset()
                 }
             })

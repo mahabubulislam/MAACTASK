@@ -8,7 +8,8 @@ import Home from "./Pages/Home/Home";
 import Register from "./Pages/Register/Register";
 import RequirAuth from "./Pages/RequireAuth/RequirAuth";
 import SignIn from "./Pages/SignIn/SignIn";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function App() {
   return (
     <div>
@@ -27,6 +28,17 @@ function App() {
           <Route path="area-list/create-region" element={<RequirAuth><CreateRegion /></RequirAuth>}></Route>
         </Route>
       </Routes>
+      <ToastContainer
+        position="top-center"
+        autoClose={1000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   );
 }

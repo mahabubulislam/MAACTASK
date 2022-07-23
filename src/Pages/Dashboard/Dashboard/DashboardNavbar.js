@@ -1,6 +1,6 @@
 import React from 'react';
 import { AiOutlineDown } from 'react-icons/ai';
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../../assets/images/logo/FieldX.png'
 
 const DashboardNavbar = () => {
@@ -17,7 +17,7 @@ const DashboardNavbar = () => {
                     <div className="dropdown dropdown-end">
                         <label tabIndex="0" >
                             <div>
-                                <img className='w-9 avater rounded-full' src="https://placeimg.com/80/80/people" alt='User' />
+                                <img className='w-9 h-9 avater rounded-full' src="https://api.lorem.space/image/face?hash=92310" alt='User' />
                             </div>
                         </label>
                     </div>
